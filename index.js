@@ -38,7 +38,7 @@ async function init () {
       sslExtraCaCerts: get('sslExtraCaCerts'),
       requestAgents: safeParse(get('requestAgents')),
       cookieJar: get('cookieJar'),
-      envVar: JSON.parse(get('envVar')) ?? {}
+      envVar: safeParse(get('envVar'))
     }
 
     if (!options.apiKey) {
