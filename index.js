@@ -76,6 +76,7 @@ function split (str) {
 }
 
 function runNewman (options) {
+  console.log(options);
   newman.run(options).on('done', (err, summary) => {
     if (!options.suppressExitCode && (err || summary.run.failures.length)) {
       core.setFailed('Newman run failed!' + (err || ''))
