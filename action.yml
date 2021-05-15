@@ -2,7 +2,7 @@ name: 'Newman Action'
 description: 'Run Postman collections via Newman'
 author: 'Matt Ball'
 branding:
-  icon: 'check-square'  
+  icon: 'check-square'
   color: 'orange'
 inputs:
   apiKey:
@@ -61,6 +61,8 @@ inputs:
     description: 'Specify the custom requesting agents to be used when performing HTTP and HTTPS requests respectively.'
   cookieJar:
     description: 'Pass a CookieJar file path as string to this property that will be deserialized using tough-cookie.'
+  envVar:
+    description: 'Override or define environment environment variables'
 runs:
   using: 'node12'
   main: 'dist/index.js'
